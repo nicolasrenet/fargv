@@ -1,6 +1,7 @@
 from .fargv_param_registry import Name, Registry, FargvNameException, FargvDuplicateNameException
 from .fargv_param_value import Bool, Int, Float, Str, Choice, Literal, Src, StrRef, create_from_definition_data, type_from_definition_data, ParamDefinition, Sequence
 
+from typing import List
 
 debug=print
 
@@ -17,7 +18,7 @@ class UnixArgParser:
         self.__assignment_separators = ("=",)
         self.__registry = registry
 
-    def parse(self, argv: list[str]):
+    def parse(self, argv: List[Str]):
         """Parse the argv list and return a dictionary of the parsed values."""
         name = argv[0]
         if name.startswith(self.__full_separator) or name.startswith(self.__short_separator):
@@ -88,7 +89,7 @@ class UnixArgParser:
                     raise FargvArgparseException(f"Unknown parameter '{param_name}'")
             yield separator, param_name, param_values
 
-    def split_args(self, argv: list[str]):
+    def split_args(self, argv: List[str]):
         """Split the argv list into positional and keyword arguments."""
         param_border_positions = []
         for n, arg in enumerate(argv):
