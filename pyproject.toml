@@ -8,6 +8,7 @@ description = "A very easy to use argument parser."
 readme = {file="README.md", content-type="text/markdown"}
 license = {text="MIT License"}
 keywords = ["argv", "CLI", "argument"]
+requires-python = ">= 3.8"
 
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -26,3 +27,6 @@ Repository = "https://github.com/anguelos/fargv"
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = {} 
