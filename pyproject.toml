@@ -1,0 +1,28 @@
+[project]
+name = "fargv"
+version = "2.0.1"
+authors = [ 
+	{ name="Anguelos Nicolaou", email="anguelos.nicolaou@gmail.com"},
+	]
+description = "A very easy to use argument parser."
+readme = {file="README.md", content-type="text/markdown"}
+license = {text="MIT License"}
+keywords = ["argv", "CLI", "argument"]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Topic :: Scientific/Engineering",
+]
+
+[project.urls]
+
+Homepage = "https://github.com/anguelos/fargv"
+Repository = "https://github.com/anguelos/fargv"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
